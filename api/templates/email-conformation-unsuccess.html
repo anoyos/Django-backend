@@ -1,0 +1,51 @@
+{% load static %} {% load i18n %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cg-africa-static-files.s3.af-south-1.amazonaws.com/static/css/style.css"
+    />
+    <title>{% trans 'Confirm your email!' %}</title>
+  </head>
+
+  <body>
+    <div class="email-verification">
+      <div class="image-text-area">
+        <div class="image-conform">
+          <img
+            src="https://cg-africa-static-files.s3.af-south-1.amazonaws.com/static/images/email-conform.png"
+          />
+        </div>
+        <h3>{% trans 'Confirm your email!' %}</h3>
+        <p>
+          {% trans 'Your account has been successfully registered. to complete
+          the process please check your email for a validation request.' %}
+        </p>
+        <button class="btn-primery">{% trans 'Send email' %}</button>
+      </div>
+      <!-- Modal -->
+      <div class="bs-unsuccess-model">
+        <div class="unsucess-data">
+          <button class="close-model">+</button>
+          <img
+            src="https://cg-africa-static-files.s3.af-south-1.amazonaws.com/static/images/unsuccess.png"
+            alt="unsuccess!"
+          />
+          <h3>{% trans 'Unsuccess!' %}</h3>
+          <p>{{ message }}</p>
+        </div>
+      </div>
+      <!-- modal -->
+    </div>
+  </body>
+</html>
